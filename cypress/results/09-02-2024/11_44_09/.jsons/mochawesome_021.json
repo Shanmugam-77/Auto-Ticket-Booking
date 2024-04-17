@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-09T06:20:31.540Z",
+    "end": "2024-02-09T06:20:36.063Z",
+    "duration": 4523,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5260f29d-54c8-4c3f-a730-bcf7583e59c8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Login_page.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Login_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec6a8030-b59a-41bf-93f4-f3dc38c202a9",
+          "title": "Verify advertisement",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify to close the advertisement",
+              "fullTitle": "Verify advertisement verify to close the advertisement",
+              "timedOut": null,
+              "duration": 2128,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Login_page.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Login_page.cy.js\\\\Verify advertisement -- verify to close the advertisement (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"http://the-internet.herokuapp.com/login\");\ncy.get(\"#username\").click().type(\"tomsmith\").get(\"#password\").click().type(\"SuperSecretPassword!\").get(\".fa.fa-2x.fa-sign-in\").click().get(\".icon-2x.icon-signout\").click();",
+              "err": {
+                "message": "ReferenceError: The following error originated from your application code, not from Cypress.\n\n  > $ is not defined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "ReferenceError: The following error originated from your application code, not from Cypress.\n\n  > $ is not defined\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at <unknown> (http://the-internet.herokuapp.com/login:18:7)",
+                "diff": null
+              },
+              "uuid": "87fafed4-0256-4f77-8efd-6b3f7a7acead",
+              "parentUUID": "ec6a8030-b59a-41bf-93f4-f3dc38c202a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "87fafed4-0256-4f77-8efd-6b3f7a7acead"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2128,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\09-02-2024\\11_44_09\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

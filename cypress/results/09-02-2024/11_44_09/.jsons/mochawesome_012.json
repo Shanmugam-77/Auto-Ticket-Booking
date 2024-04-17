@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-09T06:17:28.327Z",
+    "end": "2024-02-09T06:18:38.912Z",
+    "duration": 70585,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bc73869f-5d1b-475e-9141-06c0a289bf93",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\DynamicLoading.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\DynamicLoading.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e76fc686-95a9-4854-bacb-fe500f9abd00",
+          "title": "My first script",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit dynamicloading page",
+              "fullTitle": "My first script Visit dynamicloading page",
+              "timedOut": null,
+              "duration": 64822,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\DynamicLoading.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\DynamicLoading.cy.js\\\\My first script -- Visit dynamicloading page (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"http://the-internet.herokuapp.com/dynamic_loading\");\ncy.get(\"a[href='/dynamic_loading/1']\").click();\ncy.get(\"div[id='start'] button\").click();\ncy.go('back');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:130005:64)\n    at <unknown> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:130321:16)\n    at tryCatcher (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://the-internet.herokuapp.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://automation/./cypress/e2e/1-getting-started/DynamicLoading.cy.js:5:11)",
+                "diff": null
+              },
+              "uuid": "30d77971-edb7-49ec-b74a-4ad55d9347f3",
+              "parentUUID": "e76fc686-95a9-4854-bacb-fe500f9abd00",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "30d77971-edb7-49ec-b74a-4ad55d9347f3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 64822,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "db7df502-8c35-4288-bd7f-f6e035e07432",
+          "title": "My second script",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit dynamicloading page",
+              "fullTitle": "My second script Visit dynamicloading page",
+              "timedOut": null,
+              "duration": 2659,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\DynamicLoading.cy.js\"\n}",
+              "code": "cy.visit(\"http://the-internet.herokuapp.com/dynamic_loading\");\ncy.get(\"a[href='/dynamic_loading/2']\").click();\ncy.get(\"div[id='start'] button\").click();\ncy.go('back');",
+              "err": {},
+              "uuid": "b4dbc813-2060-4f90-be98-58442c63dc7d",
+              "parentUUID": "db7df502-8c35-4288-bd7f-f6e035e07432",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b4dbc813-2060-4f90-be98-58442c63dc7d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\09-02-2024\\11_44_09\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-09T06:15:58.889Z",
+    "end": "2024-02-09T06:16:21.312Z",
+    "duration": 22423,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0da678ff-b641-4148-9f69-fa0285b93f55",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\DataDrivenTesting.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\DataDrivenTesting.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "646c45f6-e7fc-4e24-8f50-fa3fc7b7b7f4",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Datadriventesting",
+              "fullTitle": "MyTestSuite Datadriventesting",
+              "timedOut": null,
+              "duration": 18694,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\DataDrivenTesting.cy.js\"\n}",
+              "code": "cy.fixture('OrangeHRM2').then(data => {\n  // find\n  //data.forEach((_userdata) => {\n  data.forEach(userdata => {\n    cy.visit(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\n    cy.get(\"input[placeholder='Username']\").type(userdata.username);\n    cy.get(\"input[placeholder='Password']\").type(userdata.password);\n    cy.get(\"button[type='submit']\").click();\n    if (userdata.username == 'Admin' && userdata.password == 'admin123') {\n      cy.xpath(\"(//h6[normalize-space()='Dashboard'])[1]\").should('have.text', 'Dashboard');\n      cy.get(\".oxd-icon.bi-caret-down-fill.oxd-userdropdown-icon\").click(); //logout\n      cy.get(':nth-child(4) > .oxd-userdropdown-link').click(); //logout\n    } else {\n      cy.get(\".oxd-text.oxd-text--p.oxd-alert-content-text\").should('have.text', userdata.expected);\n    }\n  });\n});",
+              "err": {},
+              "uuid": "b8c04c1a-e638-42a7-8a6e-5e988941c84d",
+              "parentUUID": "646c45f6-e7fc-4e24-8f50-fa3fc7b7b7f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b8c04c1a-e638-42a7-8a6e-5e988941c84d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18694,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\09-02-2024\\11_44_09\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

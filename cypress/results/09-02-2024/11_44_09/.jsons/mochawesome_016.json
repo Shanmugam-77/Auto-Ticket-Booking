@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-09T06:19:26.588Z",
+    "end": "2024-02-09T06:19:47.083Z",
+    "duration": 20495,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d0ec0ee0-9a31-4ba6-aebf-a01d1a5dd248",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\FileUpload.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\FileUpload.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1d21fb9-0395-473f-86a8-f1ea92fbd89b",
+          "title": "My first script",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fixtures demo test",
+              "fullTitle": "My first script Fixtures demo test",
+              "timedOut": null,
+              "duration": 16584,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\FileUpload.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\FileUpload.cy.js\\\\My first script -- Fixtures demo test (failed) (2).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\n//cy.fixture('OrangeHRM').then( (data1)=>{\ncy.get(\"input[placeholder='Username']\").type('Admin');\ncy.get(\"input[placeholder='Password']\").type(\"admin123\");\ncy.get(\"button[type='submit']\").click();\n//after login\ncy.get(\"body > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > aside:nth-child(1) > nav:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1) > span:nth-child(2)\").click();\n//cy.get(\"button[class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']\").click();\ncy.get('.orangehrm-header-container > .oxd-button').click();\ncy.xpath(\"//button[contains(@class, 'oxd-icon-button')]/i[contains(@class, 'bi-plus')]\").click();\ncy.get('input[type=file]').selectFile('cypress/cypress/fixtures/test.png', {\n  force: true\n});\ncy.get();\n// cy.get(\"oxd-icon bi-plus\").click();\n//cy.get('div.container button.oxd-icon-button', { timeout: 10000 }).should('be.visible');\n//cy.get('.oxd-file-div > .oxd-icon-button',{ timeout: 10000}).should('be.visible'); \n//cy.get('div.container button.oxd-icon-button').click(); // Example of a more specific selector\n// cy.get('button.oxd-icon-button').eq(0).click(); // Clicks the first matched element\n// Use cy.get() to select the button element by its class name\n//cy.get('button.oxd-icon-button').click({ multiple: true });\n//cy.get('button.oxd-icon-button').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.\n    at Context.eval (webpack://automation/./cypress/e2e/1-getting-started/FileUpload.cy.js:22:11)",
+                "diff": null
+              },
+              "uuid": "147e1ecc-2ce1-4dc2-b00d-dca6892a03b5",
+              "parentUUID": "e1d21fb9-0395-473f-86a8-f1ea92fbd89b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "147e1ecc-2ce1-4dc2-b00d-dca6892a03b5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16584,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\09-02-2024\\11_44_09\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

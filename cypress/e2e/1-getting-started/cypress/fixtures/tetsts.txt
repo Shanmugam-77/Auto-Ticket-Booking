@@ -1,0 +1,5 @@
+cypress run --spec "cypress/e2e/examples/actions.cy.js,cypress/e2e/examples/files.cy.js"
+
+
+
+node_modules\.bin\cypress run

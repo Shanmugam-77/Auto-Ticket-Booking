@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-02-09T06:15:11.586Z",
+    "end": "2024-02-09T06:15:30.641Z",
+    "duration": 19055,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "68d4584d-6dff-427e-8497-3c40870709b9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Capturescrrenshotsandvideos.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Capturescrrenshotsandvideos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aac10dfb-c55a-4d39-913c-b50f35a48b11",
+          "title": "My test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Capture screenshots and videos",
+              "fullTitle": "My test suite Capture screenshots and videos",
+              "timedOut": null,
+              "duration": 14351,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Capturescrrenshotsandvideos.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Capturescrrenshotsandvideos.cy.js\\\\Homepage (28).png\",\n        \"\\\\Capturescrrenshotsandvideos.cy.js\\\\Logo (28).png\",\n        \"\\\\Capturescrrenshotsandvideos.cy.js\\\\My test suite -- Capture screenshots and videos (failed) (28).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"https://eoxys.ai/#/website\");\ncy.screenshot('Homepage');\ncy.get(\"img[alt='Eoxys']\").screenshot('Logo');\n//Automatically capture screenshot and video on failure\ncy.scrollTo(0, 300);\ncy.get(\"section[id='approach'] h2[class='MuiTypography-root MuiTypography-h2 css-1p2wgwg']\").should('have.text', 'Our Aproach');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h2.MuiTypography-root.MuiTypography-h2.css-1p2wgwg>' to have text 'Our Aproach', but the text was 'our approach'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h2.MuiTypography-root.MuiTypography-h2.css-1p2wgwg>' to have text 'Our Aproach', but the text was 'our approach'\n    at Context.eval (webpack://automation/./cypress/e2e/1-getting-started/Capturescrrenshotsandvideos.cy.js:10:93)",
+                "diff": "- 'our approach'\n+ 'Our Aproach'\n"
+              },
+              "uuid": "d083b96a-f16f-4491-8d12-3c09a6faab41",
+              "parentUUID": "aac10dfb-c55a-4d39-913c-b50f35a48b11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d083b96a-f16f-4491-8d12-3c09a6faab41"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14351,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\results\\09-02-2024\\11_44_09\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
